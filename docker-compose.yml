@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  deephaven:
+    image: ghcr.io/deephaven/server:${VERSION:-latest}
+    networks:
+      - redpanda-quickstart_redpanda_network
+    ports:
+      - "${DEEPHAVEN_PORT:-10000}:10000"
+    volumes:
+      - ./data:/data
+      - ./my-aws-pyspark-table:/my-aws-pyspark-table
+    environment:
+      - START_OPTS=-Xmx4g -Dauthentication.psk=password -Ddeephaven.application.dir=/data/app.d
+
+
+networks:
+  redpanda-quickstart_redpanda_network:
+    external: true

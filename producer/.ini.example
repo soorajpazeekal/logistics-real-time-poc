@@ -1,0 +1,10 @@
+[DEFAULT]
+bootstrap_servers = localhost:19092
+delta_lake_path = <path to delta lake folder> 
+checkpointLocation = <path to checkpoint folder> 
+
+
+[AWS]
+s3_bucket_path = s3a://<bucket name>
+aws_access_key = <IAM access key> #s3 read access required
+aws_secret_key = <IAM secret key>
