@@ -11,6 +11,11 @@ log.basicConfig(level=log.INFO)
 
 class OrderPlacement:
     def generate_order_placement_data():
+        """
+        Generates order placement data.
+
+        :return: dict -- A dictionary containing order placement data.
+        """
         order_data = {
             "order_id": fake.uuid4(),
             "customer_name": fake.name(),
@@ -22,6 +27,17 @@ class OrderPlacement:
         return order_data
     
     def generate_random_products():
+        """
+        Generates a list of random products.
+        
+        Returns:
+            list: A list of dictionaries, where each dictionary represents a product.
+                Each product dictionary contains the following keys:
+                - "product_id" (str): The unique identifier for the product.
+                - "product_name" (str): The name of the product.
+                - "quantity" (int): The quantity of the product.
+                - "price" (float): The price of the product.
+        """
         num_products = random.randint(1, 5); products = []
         for _ in range(num_products):
             product = {
@@ -42,6 +58,17 @@ class OrderPlacement:
     
 class ShipmentTracking:
     def generate_shipment_tracking_data(order_id, shipping_address):
+        """
+        Generates shipment tracking data for an order.
+
+        Parameters:
+            order_id (int): The ID of the order.
+            shipping_address (str): The address to which the shipment is being sent.
+
+        Returns:
+            dict: A dictionary containing the shipment tracking data, including the order ID, tracking number, carrier,
+                  estimated delivery date, status, and shipping address.
+        """
         status_choices = ["Shipped"] * 7 + ["User Cancelled"] * 3
         shipment_data = {
             "order_id": order_id,
@@ -53,6 +80,23 @@ class ShipmentTracking:
         }
         return shipment_data
     def validate_shipment_tracking_data(order_id, status, estimated_delivery_date):
+            """
+            Validates the shipment tracking data based on the given order ID, status, and estimated delivery date.
+
+            Args:
+                order_id (int): The unique identifier of the order.
+                status (str): The current status of the shipment.
+                estimated_delivery_date (str): The estimated delivery date of the shipment.
+
+            Returns:
+                dict: A dictionary representing the validated shipment tracking data. The dictionary contains the following keys:
+                    - order_id (int): The unique identifier of the order.
+                    - status (str): The current status of the shipment.
+                    - current_location (dict): A dictionary representing the current location of the shipment. The dictionary contains the following keys:
+                        - latitude (float): The latitude of the current location.
+                        - longitude (float): The longitude of the current location.
+                    - estimated_delivery_date (str): The estimated delivery date of the shipment.
+            """
             if status == "Shipped":
                 status_choices = ["In Transit"] * 4 + ["Out for Delivery"] * 3 + ["Delivered"] * 3
                 tracking_data = {
@@ -73,6 +117,15 @@ class ShipmentTracking:
             
 class BaseAnalytics:
     def on_time_delivery(order_id):
+        """
+        Generate a final analytics report for a given order.
+
+        Args:
+            order_id (int): The ID of the order.
+
+        Returns:
+            dict: A dictionary containing the order ID, time stamp, on-time delivery percentage, and order accuracy percentage.
+        """
         final_analytics = {
             "order_id": order_id,
             "time_stamp": datetime.now(),
@@ -100,4 +153,3 @@ def main_flow():
 
 if __name__ == "__main__":
     main_flow()
-
