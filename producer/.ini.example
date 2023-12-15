@@ -1,5 +1,6 @@
 [DEFAULT]
 bootstrap_servers = localhost:19092
+docker_bootstrap_servers = redpanda-0:9092
 delta_lake_path = <path to delta lake folder> 
 checkpointLocation = <path to checkpoint folder> 
 
