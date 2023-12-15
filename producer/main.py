@@ -71,7 +71,7 @@ def main():
     """
     while True:
         producer_config = {
-            'bootstrap.servers': config['DEFAULT']['bootstrap_servers'],
+            'bootstrap.servers': config['DEFAULT']['docker_bootstrap_servers'],
             'compression.type': "snappy",
             }
         order_placement_data = OrderPlacement.generate_order_placement_data()
