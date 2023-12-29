@@ -60,7 +60,7 @@ services:
       - redpanda-0
 
   deephaven:
-    image: ghcr.io/deephaven/server:${VERSION:-latest}
+    image: ghcr.io/deephaven/server:0.31.0
     networks:
       - redpanda_network
     ports:
