@@ -1,0 +1,5 @@
+delta-spark==2.3.0
+findspark==2.0.1
+Faker==20.1.0
+confluent-kafka==2.3.0
+
