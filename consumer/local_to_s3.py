@@ -24,7 +24,7 @@ spark = configure_spark_with_delta_pip(builder, extra_packages=packages).getOrCr
 df = spark.read.format("delta").load(config['DEFAULT']['delta_lake_path'])
 df.show()
 df.write.format("delta") \
-    .mode("overwrite") \
+    .mode("append") \
     .partitionBy("year", "month") \
     .option("maxRecordsPerFile", "10000") \
     .save(config['AWS']['s3_bucket_path'])
