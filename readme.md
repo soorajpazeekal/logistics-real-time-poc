@@ -1,4 +1,5 @@
-![test drawio](https://github.com/soorajpazeekal/logistics-real-time-poc/assets/41431605/76724ccb-9202-419b-ae26-1094d440b750)
 
 
 
+
+![test drawio (2)](https://github.com/soorajpazeekal/logistics-real-time-poc/assets/41431605/af9b188a-337f-4884-bd3a-5d3430090421)
