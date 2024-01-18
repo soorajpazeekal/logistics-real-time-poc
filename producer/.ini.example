@@ -6,6 +6,6 @@ checkpointLocation = <path to checkpoint folder>
 
 
 [AWS]
-s3_bucket_path = s3a://<bucket name>
+s3_bucket_path = s3a://<bucket name>/table
 aws_access_key = <IAM access key> #s3 read access required
 aws_secret_key = <IAM secret key>
