@@ -50,7 +50,7 @@
 - [Delta Lake](https://docs.delta.io/latest/delta-intro.html)
 ## Installation
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/soorajpazeekal/Data-Engineering-Projects-basic)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/soorajpazeekal/logistics-real-time-poc)
 
 ***This project was tested on Linux platforms. So that's a recommended way to install this project in a Linux environment.***
 
@@ -63,7 +63,7 @@ cd logistics-real-time-poc
 
 - Open 'producer' folder and edit *.ini.example* file then save
 
-```json
+```env
 [DEFAULT]
 bootstrap_servers = localhost:19092
 docker_bootstrap_servers = redpanda-0:9092
