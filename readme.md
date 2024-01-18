@@ -1,4 +1,7 @@
 
+[![open Linkedin profile](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/soorajpazeekal)
+
+
 # real-time logistics tracking and management proof of concept
 
 ***Proof of Concept for a US-based Grocery Delivery Platform, Ensuring Swift Delivery Within 15 Minutes***
@@ -46,6 +49,8 @@
 - [databricks](https://www.databricks.com/blog/what-is-a-data-intelligence-platform)
 - [Delta Lake](https://docs.delta.io/latest/delta-intro.html)
 ## Installation
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/soorajpazeekal/Data-Engineering-Projects-basic)
 
 ***This project was tested on Linux platforms. So that's a recommended way to install this project in a Linux environment.***
 
@@ -120,3 +125,8 @@ python kafka_to_delta.py
 python local_to_s3.py
 ```
 ***The "local_to_s3.py" program is designed to seamlessly transfer data from local Delta tables to an AWS S3 bucket while maintaining the Delta table format. This automated process ensures efficient and structured storage in the cloud.***
+
+## Contact
+
+
+Please feel free to contact me if you have any questions at: LinkedIn: [![open Linkedin profile](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/soorajpazeekal)
